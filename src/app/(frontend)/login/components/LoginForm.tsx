@@ -53,9 +53,15 @@ export default function LoginForm(): ReactElement {
               type="password"
             />
           </div>
+          {error && <p>An error occurred!</p>}
           <SubmitButton loading={isPending} text="Login" />
         </form>
-        {error && <p>An error occurred!</p>}
+        <p className="mt-10 text-center text-sm text-gray-400">
+          Don't have an account?{' '}
+          <a href="/signup" className="text-blue-500">
+            signup
+          </a>
+        </p>
       </div>
     </div>
   )
